@@ -75,9 +75,10 @@ void main()
 		// Fetch the object space normal from the normal map and scale it.
 		// Then transform to camera space and assign to mappedNormal.
 		// Don't forget to normalize!
-		vec3 normalFromTexture = vec3(0.0);
-		// mappedNormal = ...
-
+		vec3 normalFromTexture =  vec3(0,0,0);
+		//normalFromTexture = normalFromTexture * normalMapScale;
+		//mappedNormal = normalize (normalToCamera*normalFromTexture);
+		
 		if (renderMode == 2)
 		{
 			outColor = vec4(normalFromTexture*0.5+0.5, 1);
