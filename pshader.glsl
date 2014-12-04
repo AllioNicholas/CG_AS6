@@ -56,7 +56,7 @@ void main()
 		// YOUR CODE HERE (R1)
 		// Fetch the diffuse material color at the texture coordinates of the fragment.
 		// This is just one line of code.
-		// diffuseColor = ...
+		diffuseColor = texture(diffuseSampler, texCoordVarying); 
 	}
 
 	// diffuse only?

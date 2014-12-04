@@ -3,23 +3,25 @@
 #
 # Assignment 6: Real-Time Shading
 
-Student name:
-Student number:
+Student name: ALLIO NICHOLAS
+Student number: 471794
 Hours spent on requirements (approx.):
 Hours spent on extra credit (approx.):
 
 # First, a 10-second poll about this assignment period:
 
 Did you go to exercise sessions?
+	NO, I DIDN´T
 
 Did you work on the assignment using Aalto computers, your own computers, or both?
+	I WORKED ONLY USING AALTO COMPUTERS
 
 # Which parts of the assignment did you complete? Mark them 'done'.
 # You can also mark non-completed parts as 'attempted' if you spent a fair amount of
 # effort on them. If you do, explain the work you did in the problems/bugs section
 # and leave your 'attempt' code in place (commented out if necessary) so we can see it.
 
-R1       Sample diffuse texture (1p): not done
+R1       Sample diffuse texture (1p): done
 R2        Sample normal texture (1p): not done
 R3  Blinn-Phong diffuse shading (2p): not done
 R4 Blinn-Phong specular shading (2p): not done
