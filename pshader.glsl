@@ -75,9 +75,8 @@ void main()
 		// Fetch the object space normal from the normal map and scale it.
 		// Then transform to camera space and assign to mappedNormal.
 		// Don't forget to normalize!
-		vec3 normalFromTexture =  vec3(0,0,0);
-		//normalFromTexture = normalFromTexture * normalMapScale;
-		//mappedNormal = normalize (normalToCamera*normalFromTexture);
+		vec3 normalFromTexture = texture(normalSampler, texCoordVarying).xyz * 2.0 - 1.0;
+		mappedNormal = normalize (normalToCamera*normalFromTexture);
 		
 		if (renderMode == 2)
 		{
