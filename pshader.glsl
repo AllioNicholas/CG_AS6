@@ -107,12 +107,14 @@ void main()
 		// YOUR CODE HERE (R3)
 		// Compute the contribution of this light to diffuse shading.
 		// This is just one row of code.
-		vec3 diffuse = diffuseColor.xyz * max(dot(N, lightDirections[i]), 0.0f) /** lightIntensities[i]*/;
+		vec3 diffuse = diffuseColor.xyz * max(dot(N, lightDirections[i]), 0.0f);
 
 		// YOUR CODE HERE (R4)
 		// Compute the contribution of this light to Blinn-Phong (half-angle) specular shading.
-		vec3 specular = vec3(0, 0, 0);
-
+		//vec3 hi = (lightDirections[i] + V)/norm(lightDirections[i] + V);
+		//vec3 specular = specularUniform * pow(max(dot(N, hi), 0.0f), glossiness);
+		vec3 specular = vec3(0,0,0);
+		
 		if (setDiffuseToZero)
 			diffuse = vec3(0, 0, 0);
 
