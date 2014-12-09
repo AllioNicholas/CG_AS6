@@ -97,7 +97,7 @@ void main()
 	// Compute the to-viewer vector V which you'll need in the loop
 	// below for Blinn-Phong specular computation.
 	// R5: In which space does V lie in?
-	vec3 V = vec3(0,0,0);
+	vec3 V = normalize(-positionVarying);
 
 	// add the contribution of all lights to the answer
 	vec3 answer = vec3(0,0,0);
@@ -111,9 +111,10 @@ void main()
 
 		// YOUR CODE HERE (R4)
 		// Compute the contribution of this light to Blinn-Phong (half-angle) specular shading.
-		//vec3 hi = (lightDirections[i] + V)/norm(lightDirections[i] + V);
-		//vec3 specular = specularUniform * pow(max(dot(N, hi), 0.0f), glossiness);
-		vec3 specular = vec3(0,0,0);
+		vec3 hi_raw = lightDirections[i] + V;
+		vec3 hi = hi_raw/length(hi_raw);
+		vec3 specular = specularUniform * pow(max(dot(N, hi), 0.0f), glossiness);
+		//vec3 specular = vec3(0,0,0);
 		
 		if (setDiffuseToZero)
 			diffuse = vec3(0, 0, 0);

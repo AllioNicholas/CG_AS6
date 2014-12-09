@@ -24,7 +24,7 @@ Did you work on the assignment using Aalto computers, your own computers, or bot
 R1       Sample diffuse texture (1p): done
 R2        Sample normal texture (1p): done
 R3  Blinn-Phong diffuse shading (2p): done
-R4 Blinn-Phong specular shading (2p): not done
+R4 Blinn-Phong specular shading (2p): done
 R5     Normal transform insight (4p): not done
 
 # Did you do any extra credit work?
