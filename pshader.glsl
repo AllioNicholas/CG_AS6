@@ -56,7 +56,7 @@ void main()
 		// YOUR CODE HERE (R1)
 		// Fetch the diffuse material color at the texture coordinates of the fragment.
 		// This is just one line of code.
-		diffuseColor = texture(diffuseSampler, texCoordVarying); 
+		diffuseColor = texture(diffuseSampler, texCoordVarying);
 	}
 
 	// diffuse only?
@@ -77,7 +77,7 @@ void main()
 		// Don't forget to normalize!
 		vec3 normalFromTexture = texture(normalSampler, texCoordVarying).xyz * 2.0 - 1.0;
 		mappedNormal = normalize (normalToCamera*normalFromTexture);
-		
+
 		if (renderMode == 2)
 		{
 			outColor = vec4(normalFromTexture*0.5+0.5, 1);
@@ -90,7 +90,7 @@ void main()
 		outColor = vec4(mappedNormal*0.5+0.5, 1);
 		return;
 	}
-					
+
 	vec3 N = mappedNormal;
 
 	// YOUR CODE HERE (R4)
@@ -115,7 +115,7 @@ void main()
 		vec3 hi = hi_raw/length(hi_raw);
 		vec3 specular = specularUniform * pow(max(dot(N, hi), 0.0f), glossiness);
 		//vec3 specular = vec3(0,0,0);
-		
+
 		if (setDiffuseToZero)
 			diffuse = vec3(0, 0, 0);
 
@@ -128,27 +128,9 @@ void main()
 			// YOUR SHADOWS HERE: use lightDist and shadowUV, maybe modify Li
 			// this point is shadowed is some point is closer to the light than this
 			// (try also adding a small bias value to either of those and see what happens; somehow analugous to the epsilon in ray tracing)
-		}	
+		}
 
 		answer += Li;
 	}
 	outColor = vec4(answer, 1);
 }
-
-
-/*
-R5 table:
-
-  -------------------------------------------------------
-  |	Vector:		|	Space before:	|	Space after:	|
-  -------------------------------------------------------
-  |	lighDir		|	world space		|	camera space	|
-  -------------------------------------------------------
-  |	normal		|	world space		|	camera space	|
-  -------------------------------------------------------
-  |	V			|	camera space	|	camera space	|
-  -------------------------------------------------------
-*/
-
-
-

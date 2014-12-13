@@ -25,7 +25,7 @@ R1       Sample diffuse texture (1p): done
 R2        Sample normal texture (1p): done
 R3  Blinn-Phong diffuse shading (2p): done
 R4 Blinn-Phong specular shading (2p): done
-R5     Normal transform insight (4p): not done
+R5     Normal transform insight (4p): attempt
 
 # Did you do any extra credit work?
 
@@ -42,3 +42,16 @@ R5     Normal transform insight (4p): not done
 # Any other comments you'd like to share about the assignment or the course so far?
 
 (Was the assignment too long? Too hard? Fun or boring? Did you learn something, or was it a total waste of time? Can we do something differently to help you learn? Please be brutally honest; we won't take it personally.)
+
+
+R5:
+
+---------------------------------------------
+|	Vector:		|	Space before:	|	Space after:	|
+---------------------------------------------
+|	lighDir		|	world space		|	camera space	|
+---------------------------------------------
+|	normal		|	world space		|	camera space	|
+---------------------------------------------
+|	V					|	camera space	|	camera space	|
+---------------------------------------------
